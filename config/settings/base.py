@@ -61,7 +61,9 @@ CORS_ALLOW_HEADERS = (
 )
 
 LOCAL_APPS = [
-    # Add local apps
+    'apps.users.apps.UsersConfig',
+    'apps.projects.apps.ProjectsConfig',
+
 ]
 
 DJANGO_APPS = [
@@ -75,7 +77,9 @@ DJANGO_APPS = [
 
 THIRD_PARTY_APPS = [
     'rest_framework',
+    'rest_framework_simplejwt',
     'corsheaders',
+    'django_extensions',
 ]
 
 INSTALLED_APPS = LOCAL_APPS + DJANGO_APPS + THIRD_PARTY_APPS
